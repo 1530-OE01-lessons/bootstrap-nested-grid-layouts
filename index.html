@@ -10,14 +10,41 @@
         <meta name="description" content="">
 
         <title>26 - Nested Grid Layouts</title>
-
         <!-- Bootstrap CSS -->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <!-- We won't use the JavaScript library for this demo. -->
     </head>
-    <body>
-        <h1>Ode Tae The Heilans</h1>
+    <!-- structural layout container > row > columns -->
+    <body class="container py-5">
+        <section class="row py-5">
+            <h1 class="display-2 text-center mb-5">Ode Tae The Heilans</h1>
+            <!-- We can use the order property here because row is a flex container. However, there is a limit as to how many items we can order at once (up to 5 items). -->
+            <img class="img-fluid rounded col-xl-6 order-xl-2" src="img/wee-coo.webp" alt="A wee hielan coo">
+            <img class="img-fluid rounded col-xl-3 mt-3 mt-xl-0 order-xl-1" src="img/craig.webp" alt="A craig over the sea">
+            <img class="img-fluid rounded col-xl-3 mt-3 mt-xl-0 order-xl-3" src="img/burnie.webp" alt="A burnie whimplin throu tha town">
+        </section>
 
-        <h2>Haste Ye Back</h2>
+        <!-- outer row -->
+        <section class="row">
+             <h2 class="display-3 text-center mb-5">Haste Ye Back</h2>
+             <div class="col-lg-6">
+                <img class="img-fluid" src="img/bothie.webp" alt="a bothie inner hielans">
+             </div>
+             <!-- this outer column is going to hold the 4 grid images-->
+             <div class="col-lg-6">
+                <!-- first inner row -->
+                 <div class="row">
+                    <img class="img-fluid col-md-6 mt-3 mt-lg-0" src="img/braes.webp" alt="top view of stream in scotland">
+                    <img class="img-fluid col-md-6 mt-3 mt-lg-0" src="img/nook.webp" alt="nook by the window">
+                 </div>
+                 <!-- 2nd inner row -->
+                  <div class="row mt-lg-2">
+                    <img class="img-fluid col-md-6 mt-3 mt-lg-4 " src="img/blade.webp" alt="dewy leaves">
+                    <img class="img-fluid col-md-6 mt-3 mt-lg-4" src="img/hauns.webp" alt="holding hands">
+                  </div>
+             </div>
+        </section>
+       
     </body>
 
 </html>
